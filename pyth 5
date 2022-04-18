@@ -1,0 +1,301 @@
+def printGreeting():
+    print('Buna ziua ! Bine am venit!')
+
+
+def printGreetingByName(nume, prenume):
+    print(f'Buna ziua {nume} {prenume}')
+
+
+# zona de apelare desktop
+printGreeting()
+printGreeting()
+printGreetingByName('Dumitru', 'Dan')
+printGreetingByName('Dumitru', 'Daniel')
+
+
+# print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# avand 3 numere , returnati pe cel mai mare
+def maxNumbers(nr_1, nr_2, nr_3):
+    return max(nr_1, nr_2, nr_3)
+
+
+print(max(7, 4, 1))
+
+
+# 1. Functie care sa calculeze si sa returneze suma a 2 numere
+def sumNr(a, b, ):
+    return (a + b)
+
+
+print(sumNr(6, 7))
+
+
+# 2. Functie care sa returneze TRUE daca un numar este par, FALSE pt impar
+def verificare(numar):
+    if numar % 2 == 0:
+        return True
+    else:
+        return False
+
+
+print(verificare(12))
+
+
+# 3. Functie care returneaza numarul total de caractere din numele tau complet.
+# (nume, prenume, nume_mijlociu)
+def vericareNumarCaractere_len(nume, prenume):
+    for idx_caractere, caractere in enumerate(nume, prenume):
+        return len(caractereInNume)
+
+
+print(f"enumerate_len('Daniel','Dumitru')")
+
+
+# 4. Functie care returneaza aria dreptunghiului
+class Rectangle():
+    def __init__(self, l, w):
+        self.length = l
+        self.width = w
+
+    def rectangle_area(self):
+        return self.length * self.width
+
+
+newRectangle = Rectangle(12, 10)
+print(newRectangle.rectangle_area())
+
+
+# 5. Functie care returneaza aria cercului
+def circle_area(r):
+    try:
+        r = float(r)
+    except:
+        print(f'{r} value is not accepted ,try entering a number')
+    else:
+        return round(3.141 * r * r, 2)
+
+
+print(circle_area(3))
+print(circle_area(4))
+# V2
+import math
+
+rad = float(input("Enter the radius:"))
+area = math.pi * (rad ** 2)
+print(area)
+
+
+# 6. Functie care returneaza True daca un caracter x se gaseste intr-un string dat. Fasle daca nu
+def ch_in_string(ch, string):
+    if ch in string:
+        return True
+    else:
+        return False
+
+
+print(ch_in_string('h', 'chloe'))
+print(ch_in_string('v', 'chloe'))
+
+
+# 7. Functie fara return, primeste un string si printeaza pe ecran:
+# Nr de caractere lower case este x
+# Nr de caractere upper case exte y
+def upper_lower(string):
+    for elem in string:
+        if elem == elem.upper():
+            upper += 1
+        elif elem == elem.lower():
+            lower += 1
+    print(f'{string} has {lower} ch on lower case and {upper} on upper ')
+
+
+# 8. Functie care primeste o LISTA de numere si returneaza o LISTA doar cu numerele pozitive
+def listOfNumbers(*args):
+    positiveNumbers = []
+    for nr in range(len(args)):
+        if nr > 0:
+            positiveNumbers.append(nr)
+    return positiveNumbers
+
+
+answer = listOfNumbers(2, 5, -9, -4, 3, -8)
+print(answer)
+# v2
+def list_of_positive(a_list):
+    res_list = []
+    for elem in a_list:
+        if elem >= 0:
+            res_list.append(elem)
+    return  res_list
+
+in_list = [2, 5, -9, -4, 3, -8, 1.356]
+out_list = list_of_positive(in_list)
+print((out_list))
+# 9. Functie care nu retunraza nimic. Primeste 2 numere si PRINTEAZA
+
+# Primul numar x este mai mare decat al doilea nr y
+# Al doilea nr y este mai mare decat primul nr x
+# Numerele sunt egale.
+def numbers(x,y):
+    if x>y:
+        print(f'{x} is bigger')
+    elif y>x:
+        print (f'{y} is bigger')
+    else:
+        print(f'numbers are equals')
+
+
+numbers(7, 5)
+numbers(6,6)
+numbers(7,9)
+# 10. Functie care primeste un numar si un set de numere.
+# printeaza ‘am adaugat numarul nou in set’ + returneaza True
+# Sau Printeaza ‘nu am adaugat numarul in set. Acesta exista deja’ + returneaza False
+def numbersAndSet(nr,*args):
+    for elem in args:
+        if nr not in args:
+            print('Am adaugat numarul nou in set.')
+            return True
+        else:
+            print('Nu am adaugat numarul in set.Acesta exista deja.' )
+            return False
+
+numbersAndSet(5,0,7,5)
+# 12 days to birthday = functie ce returneaza nr de zile pana la ziua mea
+
+import datetime
+def daysToBday(ziua,luna):
+# ziua = input ('introdu ziua de nastere')
+# luna = input ('introdu luna de nastere')
+    pass
+    today = datetime.datetime.now()
+    if today < ziuaNoastra:
+        ziuaNoastra = datetime.datetime(2022, luna, ziua)
+    dateBday = ziuaNoastra - today
+    return dateBday.days
+    print(datetimeBday)
+
+# ex 11 functie ce primeste o luna din an si returneaza cate zile are luna/
+def days_of_months(month):
+    import calendar
+    a = calendar.monthrange(2021, month)
+    return (f'Luna are {a[1]} zile')
+
+
+ras = days_of_months(9)
+print(ras)
+
+#ex12
+
+def calculator(nr1,nr2):
+    a = nr1 + nr2
+    b = nr1 - nr2
+    c = nr1 * nr2
+    d = nr1 / nr2
+    return a, b, c, d
+a,b,c,d = calculator(11, 12)
+a,b,c,d = calculator(6, 8)
+print(f'Suma:{a}')
+print(f'Diferenta:{b}')
+print(f'Inmultirea:{c}')
+print(f'Impartirea:{d}')
+
+#ex13
+# Functie care primeste o lista de cifre (adica doar 0-9)
+#Ex: [1, 3, 1, 5, 9, 7, 7, 5, 5]
+#Returneaza un DICT care ne spune de cate ori apare fiecare litera
+#=> dict {
+#0: 0
+#1 :2
+#2: 0
+#3: 1
+#4: 0
+#5: 3
+#6: 0
+#7: 2
+#8: 0
+#9: 1
+#}
+
+
+def list(lst):
+    my_dict = {0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0}
+    for i in range(len(lst)):
+     my_dict[lst[i]] = lst.count(lst[i])
+    return my_dict
+
+r = list([9, 7, 4, 3, 0, 2, 5 ,5,1])
+print(r)
+# 14. Functie care primeste 3 numere
+# Returneaza valoarea maxima dintre ele
+def max_3_nr(nr_1,nr_2,nr_3):
+    return max(nr_3,nr_2,nr_1)
+
+print(max_3_nr(1,2,3))
+print(max_3_nr(1,3,2))
+print(max_3_nr(3,1,2))
+# 15 Functie care sa primeasca un numar si sa retunreze suma tuturor numerelor de la 0 la acel numar
+#Ex: daca dam nr 3
+#Suma va fi 6 (0+1+2+3)
+def sum_of_number(nr):
+    sum = 0
+    for i in range(0, nr+1):
+      sum = sum +i
+    return sum
+s = sum_of_number(4)
+s1 = sum_of_number(3)
+
+print(s)
+print(s1)
+# 16. Functie in care sa dai un nume romanesc si sa iti printeze pe ecran
+# ‘Numele este de baiat’ sau ‘Numele este de fata’
+def romanian_name(name):
+   if name[-1] != 'a':
+       print('Numele este de baiat')
+   else:
+       print('Numele este de fata')
+
+romanian_name('Anca')
+romanian_name('Alex')
+romanian_name('Florina')
+romanian_name('Bogdan')
+#17. Functie care primesete 2 liste de numere (numerele pot fi dublate)
+#Returnati numerele comune Ex:
+#list1 = [1, 1, 2, 3]
+#list2 = [2, 2, 3, 4]
+#Raspuns: {2, 3}
+def repeat_list(list1,list2):
+    list1 = set(list1)
+    list2 = set(list2)
+    return(list1 & list2)
+
+
+print(repeat_list([1, 1, 2, 3],[2, 2, 3, 4]))
+
+#18 Functie care sa aplice o reducere de pret
+#Daca produsul costa 100 lei si aplicam reducere de 10%
+#Pretul va fi 90
+#Tratati cazurile in care reducerea e invalida. De ex o reducere de 110% e invalida
+def discount_price(price, discount):
+    dis = discount * price / 100
+    sale_price = price - dis
+    if discount > price:
+      return 'Reducerea e invalida'
+    else:
+     return (f'Pretul redus este:{sale_price}')
+
+product1 = discount_price(80,15)
+product2 = discount_price(90,15)
+print(product1)
+print(product2)
+#ex19  Functie care sa afiseze data si ora curenta
+
+def date_time():
+    import datetime
+    now = datetime.datetime.now()
+    print(now)
+
+date_time()
+
+
+
